@@ -42,6 +42,7 @@ public class ConexionMongo {
     }
     
     public void insertar(){
+        
         coleccion= db.getCollection("persona");
         BasicDBObject Nuevo = new BasicDBObject("Nombre","Theo")
                 .append("Age", 6)
@@ -58,13 +59,16 @@ public class ConexionMongo {
         
     }
     public void Consultar(String x){
+        int cont = 0;
         coleccion= db.getCollection("persona");
         BasicDBObject filtro = new BasicDBObject();
-        filtro.put("name", "Carlos");
+        filtro.put("name", "Adrian");
         DBCursor curse = coleccion.find(filtro);
         while (curse.hasNext()){
+            cont=+1;
             System.out.println(curse.next());
         }
+        System.out.println(cont);
        // Document dc = coleccion.find(eq("name",));
         
        // System.out.println(dc);

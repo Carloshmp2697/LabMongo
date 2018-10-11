@@ -33,7 +33,6 @@ public class Principal extends javax.swing.JFrame {
         BTNxProductora = new javax.swing.JButton();
         BtnConsultas = new javax.swing.JButton();
         BTNxTitulos = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -66,20 +65,28 @@ public class Principal extends javax.swing.JFrame {
         BTNxTitulos.setText("Titulos");
         getContentPane().add(BTNxTitulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 100, 30));
 
-        jButton1.setText("Leer");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 140, 30));
-
         jButton2.setText("Actualizar");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 140, 30));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 140, 30));
 
         jButton3.setText("Borrar");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 140, 30));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 140, 30));
 
         jButton4.setText("Crear");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, 140, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        CRUD_Create nv =new CRUD_Create();
+        nv.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,7 +131,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton BtnConsultas;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Ttiulo2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

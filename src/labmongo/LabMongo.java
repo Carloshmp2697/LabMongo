@@ -24,7 +24,7 @@ public class LabMongo {
         Inicio nv = new Inicio();
         nv.setVisible(true);
         ConexionMongo b = new ConexionMongo();
-        b.actualizar();
+        b.Consultar("Ds");
     }
     
 }
