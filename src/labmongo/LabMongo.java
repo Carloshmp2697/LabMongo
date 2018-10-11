@@ -5,6 +5,10 @@
  */
 package labmongo;
 
+import Conexion.ConexionMongo;
+import GUI.Inicio;
+import java.net.UnknownHostException;
+
 /**
  *
  * @author Carlos
@@ -13,10 +17,14 @@ public class LabMongo {
 
     /**
      * @param args the command line arguments
+     * @throws java.net.UnknownHostException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnknownHostException {
         // TODO code application logic here
-        System.out.println("hello");
+        Inicio nv = new Inicio();
+        nv.setVisible(true);
+        ConexionMongo b = new ConexionMongo();
+        b.actualizar();
     }
     
 }
